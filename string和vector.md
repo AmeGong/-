@@ -19,3 +19,4 @@ a.size() //方法size（）返回一个size_type的类型，非负整数
 
 vector与string类似
 vector的push_back方法类似与python的append
+与内置数组不同，vector数组可以直接比较数组，v1==v2可以判断vector是否相等。
