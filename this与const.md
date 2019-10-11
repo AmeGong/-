@@ -12,6 +12,17 @@ Sales_data::isbn(&total)  //Sales_data为类名，total为该类的一个实例
 在成员函数内部，我们可以直接使用对象的成员，而无须通过成员访问运算符来做到这一点，因为this所指的正是这个对象。
 并且在默认情况下，this指针式指向非常量的常量指针。this的类型式Sales_data *const。
 
+成员函数返回值为对象的引用时可以连续使用成员运算符来调用成员函数进行连续计算。例子如下。
+```
+total.combine(trans).isbn()
+
+//其中combine：
+Sales_data &combine() { // 返回一个类的应用
+    ...
+    return *this // 返回自己这个类
+}
+```
+
 
 ## 常量成员函数
 在成员函数声明和定义的中，形参列表后会跟着一个const，例子如下：
